@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [desderdev](https://up.htmlacademy.ru/htmlcss/18/user/479451).
-* Наставник: `Неизвестно`.
+* Наставник: [Nikola Markelov](https://github.com/nikolamarkelov)
 
 ---
 
