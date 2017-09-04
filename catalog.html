@@ -3,12 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Поиск отеля в Седоне, рейтинг отелей</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
    	<!-- HEADER -->
 	<header class="main-header">
 		<a class="main-header-logo" href="index.html">
-			<img src="http://placehold.it/138x70" width="138" height="70" alt="Логотип города Седона">
+			<img src="img/main-logo.png" width="138" height="70" alt="Логотип города Седона">
 		</a>
 		<!-- NAVIGATION -->
 		<nav class="main-navigation">
@@ -19,16 +20,79 @@
 				<li><a href="#">Гостиницы</a></li>
 			</ul>
 		</nav>	<!-- END NAVIGATION -->
-	</header>	<!-- END HEADER -->
-	
+	</header>	<!-- END HEADER 	-->
+
+	<!-- 	SEARCH SECTION  -->
 	<h1 class="visually-hidden">Поиск жилья в Седоне</h1>
-	<!--:( 
-	
-	Формы пока пропускаю 
+	<section class="hotels-search">
+        <h2 class="visually-hidden">Параметры поиска</h2>
+        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+            <fieldset>
+                <legend>Инфраструктура:</legend> 
+                <ul>
+                 	<li class="filter-option">
+                        <label>
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pool" checked>Бассейн
+                        </label>
+                    </li>
+                    <li class="filter-option">
+                        <label>
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="parking">Парковка
+                        </label>
+                    </li>
+                    <li class="filter-option">
+                        <label>    
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="wi-fi">Wi-fi
+                        </label>    
+                    </li>
+                </ul>         
+            </fieldset>
+            <fieldset>
+                <legend>Тип жилья:</legend>
+                <ul>
+                    <li class="filter-option">
+                        <label>
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hotel" checked>Гостиница
+                        </label>
+                    </li>
+                    <li class="filter-option">
+                        <label>
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="motel" checked>Мотель
+                        </label>    
+                    </li>
+                    <li class="filter-option">
+                        <label>    
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="apartments" checked>Апартаменты
+                        </label>    
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Стоимость в сутки (р.)</legend>
+                <div class="input-wrapper">
+                    <label>
+                        <span class="visually-hidden">Минимальная цена</span>
+                        <input class="filter-input" type="text" placeholder="От 0">
+                    </label>
+                    <label>
+                        <span class="visually-hidden">Максимальная цена</span>
+                        <input class="filter-input" type="text" placeholder="До 3000">
+                    </label>
+                </div>
+                <div class="price-controls">
+                    <div class="scale">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="min-price"></div>
+                    <div class="max-price"></div>
+                </div>
+            </fieldset>
+            <button class="filter-button" type="submit">Показать</button>
+        </form>
+    </section>
+	<!-- 	END SEARCH SECTION	-->
 
-	:(-->
-
-	<!--    HOTEL LIST    -->
+	<!--    HOTEL LIST    		-->
 	<main class="hotels-list">
 	  	<!--    SEARCH    -->
 		<section class="search">
@@ -51,7 +115,7 @@
 		<!-- 	SEARCH RESULTS LIST	  -->
 		<section class="search-results-list">
 			<div class="item-description"> <!-- First Item Description -->
-				<img class="search-results-img" src="http://placehold.it/135x90" alt="Фото отеля Amara Resort & Spa" width="135" height="90">
+				<img class="search-results-img" src="img/amara-resort.jpg" alt="Фото отеля Amara Resort & Spa" width="135" height="90">
 				<div class="item-info">
 					<a href="#"><h2 class="title">Amara Resort & Spa</h2></a>
 					<span>Гостиница</span>
@@ -68,7 +132,7 @@
 			</div>	<!-- END First Item Description -->
 
 			<div class="item-description"> <!-- Second Item Description -->
-				<img class="search-results-img" src="http://placehold.it/135x90" alt="Фото мотеля Desert Quail Inn" width="135" height="90">
+				<img class="search-results-img" src="img/desert-quail.jpg" alt="Фото мотеля Desert Quail Inn" width="135" height="90">
 				<div class="item-info">
 					<a href="#"><h2 class="title">Desert Quail Inn</h2></a>
 					<span>Мотель</span>
@@ -85,7 +149,7 @@
 			</div>	<!-- END Second Item Description -->
 
 			<div class="item-description"> <!-- Third Item Description -->
-				<img class="search-results-img" src="http://placehold.it/135x90" alt="Фото мотеля Villas At Poco Diablo" width="135" height="90">
+				<img class="search-results-img" src="img/poco-diablo.jpg" alt="Фото мотеля Villas At Poco Diablo" width="135" height="90">
 				<div class="item-info">
 					<a href="#"><h2 class="title">Villas At Poco Diablo</h2></a>
 					<span>Апартаменты</span>
@@ -111,19 +175,19 @@
 		</div>
 		<section class="social">
 			<a class="social-btn twitter-btn" href="#">
-				<img src="http://placehold.it/46x48" width="46" height="48" alt="Twitter">
+				<img src="img/tw-icon.svg" alt="Twitter">
 			</a>
 			<a class="social-btn facebook-btn" href="#">
-				<img src="http://placehold.it/46x48" width="46" height="48" alt="Facebook">
+				<img src="img/fb-icon.svg" alt="Facebook">
 			</a>
 			<a class="social-btn youtube-btn" href="#">
-				<img src="http://placehold.it/46x48" width="46" height="48" alt="YouTube">
+				<img src="img/youtube-icon.svg" alt="YouTube">
 			</a>
 		</section>
 		<section class="copyright">
 			<a href="https://htmlacademy.ru/">
 				<span>Website by</span>
-				<img class="copyright-logo" src="http://placehold.it/115x41" width="115" height="41" alt="Логотип html academy">
+				<img class="copyright-logo" src="img/academy-logo.svg" width="115" height="41" alt="Логотип html academy">
 			</a>
 		</section>
 	</footer>	<!--    END FOOTER    -->

@@ -3,12 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Седона - городок, заслуживающий большего</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <!-- HEADER -->
 	<header class="main-header">
 		<a class="main-header-logo" href="index.html">
-			<img src="http://placehold.it/138x70" width="138" height="70" alt="Логотип города Седона">
+			<img src="img/main-logo.png" width="138" height="70" alt="Логотип города Седона">
 		</a>
 		<!-- NAVIGATION -->
 		<nav class="main-navigation">
@@ -24,18 +25,16 @@
 	<!-- MAIN CONTENT -->
 	<main class="container">
 		<h1 class="visually-hidden">Sedona</h1>
-			<section class="banner"> <!-- Banner -->
-				<img src="http://placehold.it/1200x565" alt="Захватывающий вид на горы Седоны"> 
-			    <!-- Лучше сделать в CSS, а контентное изображение (декоративный текст "Welcome to the gorgeous sedona ...") 
-			    уже разместить в html. Хотя текущая реализация не ошибочна. -->
-				<h2 class="title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
-				<p class="description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-			</section> <!-- End Banner -->
+		<section class="banner"></section>
+			<h2 class="title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+			<p class="description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+		</section> <!-- End Banner -->
+
 		<!--    FEATURES    -->
 		<section class="features">
 		 <!-- First Photo Features Block -->
 			<div class="features-img">
-				<img src="http://placehold.it/800x255" width="800" height="255" alt="Деревянные дома с верандой и видом на горы">
+				<img src="img/sedona-city.jpg" width="800" height="255" alt="Деревянные дома с верандой и видом на горы">
 				<div class="features-item-highlighted">
 					<h3 class=title>Настоящий Городок</h3>
 					<span class="numbering">- №1 -</span>
@@ -46,19 +45,19 @@
 		 	<!-- Three Main Features -->
 			<div class="features-main">
 				<div class="features-main-item">
-					<img class="icons icons-1" src="http://placehold.it/75x72" width="75" height="72" alt="icons-1">
+					<img class="icons icons-1" src="img/icons-1.svg" width="75" height="72" alt="icons-1">
 					<h3 class="title">Жилье</h3>
 					<p class="description">Рекомендуем пожить в настоящем<br>мотеле, все как в кино!</p>
 				</div>
 
 				<div class="features-main-item">
-					<img class="icons icons-2" src="http://placehold.it/75x72" width="75" height="72" alt="icons-2">
+					<img class="icons icons-2" src="img/icons-2.svg" width="75" height="72" alt="icons-2">
 					<h3 class="title">Еда</h3>
 					<p class="description">Всегда заказывайте фирменный бургер,<br>вы не разочаруетесь!</p>
 				</div>
 
 				<div class="features-main-item">
-					<img class="icons icons-3" src="http://placehold.it/75x72" width="75" height="72" alt="icons-3">
+					<img class="icons icons-3" src="img/icons-3.svg" width="75" height="72" alt="icons-3">
 					<h3 class="title">Сувениры</h3>
 					<p class="description">Не только китайского, но и местного<br>производства!</p>
 				</div>	
@@ -66,7 +65,7 @@
 
 			<!-- Second Photo Features Block -->
 			<div class="features-img">
-				<img src="http://placehold.it/800x255" width="800" height="255" alt="Скалистая местность, вид на Мост дьявола">
+				<img src="img/bridge.jpg" width="800" height="255" alt="Скалистая местность, вид на Мост дьявола">
 				<div class="features-item-highlighted">
 					<h3 class=title>Там есть мост дьявола</h3>
 					<span class="numbering">- №2 -</span>
@@ -92,14 +91,52 @@
 				<p class="description">Большинство едет в Гранд Каньон и<br>толпится там</p>
 			</div>
 		</section> <!--    END FEATURES    -->
-		
+
+		<!-- MODAL BOOKING WINDOW -->
 		<section class="hotels-search">
 			<h3 class="title">Заинтересовались?</h3>
-			<p class="description">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-			<a class="search-btn" href="hotels-search.html">Поиск гостиницы в Седоне</a>
-			<!-- формы пока не размечаю, так как они не были еще изучены на самом интенсиве, самостоятельно пока до них тоже не добрался -->
-		</section>
-	</main> <!--   END MAIN CONTENT   -->
+			<p class="search-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+            <div class="modal-window">
+                <button class="modal-btn" type="button">Поиск гостиницы в Седоне</button>
+                <form class="search" method="get" action="https://echo.htmlacademy.ru">
+                    <div class="arrival-date">
+                        <label for="arrival-date-input">Дата заезда:</label>
+                        <input class="arrival-date-input" id="arrival-date-input" type="date" name="arrival-date" placeholder="24 апреля 2017">
+                        <button class="calendar" type="button"></button>
+                    </div>
+                    <div class="departure-date">
+                        <label for="departure-date-input">Дата выезда:</label>
+                        <input class="departure-date-input" id="departure-date-input" type="date" name="departure-date" placeholder="4 июля 2017">
+                        <button class="calendar" type="button"></button>
+                    </div>
+                    <div class="guest-number">    
+                        <label for="adults-number">Взрослые:</label>
+                        <button class="guests-number-controls low" type="button">
+                            <span class="visually-hidden">Уменьшить количество</span>
+                        </button>
+                        <input class="" id="adults-number" type="text" name="adults-number" placeholder="2">
+                        <button class="guests-number-controls high" type="button">
+                            <span class="visually-hidden">Увеличить количество</span>
+                        </button>
+                        <label for="kids-number">Дети:</label>
+                        <button class="guests-number-controls low" type="button">
+                            <span class="visually-hidden">Уменьшить количество</span>
+                        </button>
+                        <input class="" id="kids-number" type="text" name="kids-number" placeholder="0">
+                        <button class="guests-number-controls high" type="button">
+                            <span class="visually-hidden">Увеличить количество</span>
+                        </button>
+                    </div> 
+                    <button class="search-btn" type="submit">Найти</button>       
+                </form>
+            </div>
+            <div class="map">
+                <img src="img/map.png" width="1200" alt="Карта Седоны и ее окрестностей">
+            </div>
+		</section> 
+		<!--  	END MODAL BOOKING WINDOW   -->
+	</main> 
+	<!--   END MAIN CONTENT   -->
 
 	<!--    FOOTER    -->
 	<footer class="main-footer">
@@ -108,21 +145,22 @@
 		</section>
 		<section class="social">
 			<a class="social-btn twitter-btn" href="#">
-				<img src="http://placehold.it/46x48" width="46" height="48" alt="Twitter">
+				<img src="img/tw-icon.svg" alt="Twitter">
 			</a>
 			<a class="social-btn facebook-btn" href="#">
-				<img src="http://placehold.it/46x48" width="46" height="48" alt="Facebook">
+				<img src="img/fb-icon.svg" alt="Facebook">
 			</a>
 			<a class="social-btn youtube-btn" href="#">
-				<img src="http://placehold.it/46x48" width="46" height="48" alt="YouTube">
+				<img src="img/youtube-icon.svg" alt="YouTube">
 			</a>
 		</section>
 		<section class="copyright">
 			<a href="https://htmlacademy.ru/">
 				<span>Website by</span>
-				<img class="copyright-logo" src="http://placehold.it/115x41" width="115" height="41" alt="Логотип html academy">
+				<img class="copyright-logo" src="img/academy-logo.svg" width="115" height="41" alt="Логотип html academy">
 			</a>
 		</section>
-	</footer> <!--    END FOOTER    -->
+	</footer> 
+	<!--    END FOOTER    -->
 </body>
 </html>
